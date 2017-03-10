@@ -1,0 +1,34 @@
+<h1>Add a Party</h1>
+<%= form_for(@party) do |f| %>
+  <label>Hosted By</label>
+  <%= f.text_field(:host_name) %>
+  </br>
+  <label>Host Email</label>
+  <%= f.text_field(:host_email) %>
+  </br>
+  <label>Number of Guests</label>
+  <%= f.text_field :numgsts, value: 0 %>
+  </br>
+  <label>Venue Name</label>
+  <%= f.text_field(:venue) %>
+  </br>
+  <label>Venue Location</label>
+  <%= f.text_field(:location) %>
+  </br>
+  <label>Party Theme</label>
+  <%= f.text_field(:theme) %>
+  </br>
+  <label>Party Start Time</label>
+  <%= f.datetime_select(:start_time) %>
+  </br>
+  <label>Party End Time</label>
+  <%= f.datetime_select(:end_time) %>
+  </br>
+  <label>Guest Names (separate by ',')</label>
+  <%= f.text_area(:guest_names) %>
+  </br>
+  <label>Description</label>
+  <%= f.text_area(:descript) %>
+  </br>
+  <%= f.submit %>
+<%- end %>
